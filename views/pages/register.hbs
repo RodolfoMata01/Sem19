@@ -1,0 +1,54 @@
+<div class="row justify-content-md-center">
+    <div class="col-md-4">
+        {{#if message}}
+            <div class="alert {{messageClass}}">
+                {{message}}
+            </div>
+        {{/if}}
+        <form action="/register" method="POST">
+            <div class="form-group">
+                Nombre
+                <input type="text" name="fname" id="" class="form-control">
+            </div>
+            <div class="form-group">
+                Apellido
+                <input type="text" name="lastname" id="" class="form-control">
+            </div>
+            <div class="form-group">
+                Calle
+                <input type="text" name="street" id="" class="form-control">
+            </div>
+            <div class="form-group">
+                Ciudad
+
+                <input type="text" name="city" id="" class="form-control">
+            </div>
+            <div class="form-group">
+                Departamento
+                <input type="text" name="state" id="" class="form-control">
+            </div>
+            <div class="form-group">
+                Codigo Postal
+                <input type="text" name="zip_postal" id="" class="form-control">
+            </div>
+            <div class="form-group">
+                Dirección
+                <input type="text" name="location" id="" class="form-control">
+            </div>
+            <div class="form-group">
+                Email
+                <input type="text" name="email" id="" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                Password
+                <input type="password" name="password" id="" class="form-control">
+            </div>
+            <div class="form-group">
+                Confirm Password
+                <input type="password" name="confirmPassword" id="" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+</div>
