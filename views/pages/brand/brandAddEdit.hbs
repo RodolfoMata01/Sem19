@@ -2,9 +2,21 @@
 <h2>{{viewTitle}}</h2>
 <form action="/brand" method="POST">
     <input type="hidden" name="_id" value="{{brand._id}}" />
-    Name
+    Nombre
     <input type="text" name="name" value="{{brand.name}}"><br />
-    Description
-    <input type="text" name="description" value="{{brand.description}}"><br />
+    Apellido
+    <input type="text" name="lastname" value="{{brand.lastname}}"><br />
+    Calle
+    <input type="text" name="street" value="{{brand.street}}"><br />
+    Ciudad
+    <input type="text" name="city" value="{{brand.city}}"><br />
+    Departamento
+    <input type="text" name="state" value="{{brand.state}}"><br />
+    Codigo postal
+    <input type="text" name="zip_postal" value="{{brand.zip_postal}}"><br />
+    Dirección
+    <input type="text" name="location" value="{{brand.location}}"><br />
+    Email
+    <input type="text" name="email" value="{{brand.email}}"><br />
     <button type="submit">Save</button>
 </form>

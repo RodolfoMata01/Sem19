@@ -2,15 +2,27 @@
 <h2>{{viewTitle}}</h2>
 <table border="1">
     <thead>
-        <th>Name</th>
-        <th>Description</th>
-        <th></th>
+        <th>Name</th> 
+        <th>Lastname </th>
+        <th>Street </th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip postal</th>
+        <th>Location</th>
+        <th>E-mail</th>
     </thead>
     <tbody>
         {{#each list}}
             <tr>
-                <td>{{this.name}}</td>
-                <td>{{this.description}}</td>
+                <td>{{this.name}}</td> 
+                <td>{{this.lastname}}</td>
+                <td>{{this.street}}</td>
+                <td>{{this.city}}</td>
+                <td>{{this.state}}</td>
+                <td>{{this.zip_postal}}</td>
+                <td>{{this.location}}</td>
+                <td>{{this.email}}</td>
+
                 <td>
                     <a href="/brand/{{this._id}}">Edit</a>
                     <a href="/brand/delete/{{this._id}}"

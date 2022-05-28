@@ -5,7 +5,7 @@ const Brand = require('../models/brand');
 // rutas
 router.get('/', (req, res) => {
     res.render('pages/brand/brandAddEdit', {
-        viewTitle: "New Brand"
+        viewTitle: "New Patrons"
     });
 });
 
@@ -20,7 +20,13 @@ router.post('/', (req, res) => {
 function insertBrand(req, res){
     var brand = new Brand();
     brand.name = req.body.name;
-    brand.description = req.body.description;
+    brand.lastname = req.body.lastname;
+    brand.street = req.body.street;
+    brand.city = req.body.city;
+    brand.state = req.body.state;
+    brand.zip_postal = req.body.zip_postal;
+    brand.location = req.body.location;
+    brand.email = req.body.email;
     brand.save(e => {
         if(!e)
         res.redirect('brand/brandList');
