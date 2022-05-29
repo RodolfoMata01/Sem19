@@ -11,15 +11,15 @@
     <tbody>
         {{#each list}}
             <tr>
-                <td>{{this.idbook}}</td> 
+                <td>{{this._id}}</td> 
                 <td>{{this.namebook}}</td>
                 <td>{{this.autorname}}</td>
                 <td>{{this.LastnameAutor}}</td>
                 <td>{{this.rating}}</td>
 
                 <td>
-                    <a href="/Bookbrand/{{this.idbook}}">Edit</a>
-                    <a href="/Bookbrand/delete/{{this.idbook}}"
+                    <a href="/Bookbrand/{{this._id}}">Edit</a>
+                    <a href="/Bookbrand/delete/{{this._id}}"
                     onclick="return confirm('Desea eliminar el Libro?');">
                     Delete
                     </a>
