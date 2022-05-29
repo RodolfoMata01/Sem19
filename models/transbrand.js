@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const transbrandSchema = new Schema({
     name: String,
-    _id: String,
+    idtrans: String,
     date: String,
     type: String,
 

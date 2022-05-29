@@ -1,6 +1,7 @@
 {{> header}}
 <h2>{{viewTitle}}</h2>
 <form action="/Bookbrand" method="POST">
+    <input type="hidden" name="_id" value="{{Bookbrand._id}}" />
     ID del libro
     <input type="text" name="idbook" value="{{Bookbrand.idbook}}" />
     Titulo del libro
