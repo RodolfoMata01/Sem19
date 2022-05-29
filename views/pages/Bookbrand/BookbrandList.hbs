@@ -1,0 +1,30 @@
+{{> header}}
+<h2>{{viewTitle}}</h2>
+<table border="1">
+    <thead>
+        <th>ID_del_libro</th> 
+        <th>Titulo_del_libro </th>
+        <th>Nombres_del_autor </th>
+        <th>Apellidos_del_autor</th>
+        <th>Rating_del_libros</th>
+    </thead>
+    <tbody>
+        {{#each list}}
+            <tr>
+                <td>{{this.idbook}}</td> 
+                <td>{{this.namebook}}</td>
+                <td>{{this.autorname}}</td>
+                <td>{{this.LastnameAutor}}</td>
+                <td>{{this.rating}}</td>
+
+                <td>
+                    <a href="/Bookbrand/{{this._id}}">Edit</a>
+                    <a href="/Bookbrand/delete/{{this._id}}"
+                    onclick="return confirm('Desea eliminar el Libro?');">
+                    Delete
+                    </a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
