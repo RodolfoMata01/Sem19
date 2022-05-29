@@ -32,7 +32,7 @@ function insertBookbrand(req, res){
     });
 }
 function updateBookbrand(req, res){
-    Brand.findOneAndUpdate({idbook: req.body.idbook}, req.body, {new:true}, (err, doc) => {
+    Brand.findOneAndUpdate({_id: req.body._id}, req.body, {new:true}, (err, doc) => {
         if(!err){
             res.render('Bookbrand/BookbrandList', {
                 viewTitle: "Update Bookbrand",
@@ -57,7 +57,7 @@ router.get('/BookbrandList', (req, res) => {
     });
 })
 
-router.get('/:idbook', (req, res) => {
+router.get('/:_id', (req, res) => {
     Brand.findById(req.params.id, (err, doc) => {
         if(!err){
             res.render('pages/Bookbrand/BookbrandAddEdit', {

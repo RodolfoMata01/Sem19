@@ -12,7 +12,7 @@ const hbs = require('hbs');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var brandsRouter = require('./routes/brands');
-
+var bookRouter = require('./routes/books');
 var app = express();
 
 // view engine setup
@@ -39,6 +39,7 @@ app.use((req, res, next) => {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/brand', brandsRouter);
+app.use('/Bookbrand', bookRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

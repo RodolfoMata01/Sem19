@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const brandSchema = new Schema({
+const BookbrandSchema = new Schema({
     idbook: String,
     namebook: String,
     autorname: String,
@@ -16,6 +16,6 @@ const brandSchema = new Schema({
 
 
 
-const Brand = mongoose.model('Brand', brandSchema);
+const Bookbrand = mongoose.model('Bookbrand', BookbrandSchema);
 
-module.exports = Brand;
+module.exports = Bookbrand;

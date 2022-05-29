@@ -1,15 +1,15 @@
 {{> header}}
 <h2>{{viewTitle}}</h2>
 <form action="/Bookbrand" method="POST">
-    <input type="hidden" name="idbook" value="{{Bookbrand.idbook}}" />
     ID del libro
-    <input type="text" name="namebook" value="{{Bookbrand.namebook}}"><br />
+    <input type="text" name="idbook" value="{{Bookbrand.idbook}}" />
     Titulo del libro
-    <input type="text" name="autorname" value="{{Bookbrand.autorname}}"><br />
+    <input type="text" name="namebook" value="{{Bookbrand.namebook}}"><br />
     Nombres del autor
-    <input type="text" name="LastnameAutor" value="{{Bookbrand.LastnameAutor}}"><br />
+    <input type="text" name="autorname" value="{{Bookbrand.autorname}}"><br />
     Apellidos del autor
-    <input type="text" name="rating" value="{{Bookbrand.rating}}"><br />
+    <input type="text" name="LastnameAutor" value="{{Bookbrand.LastnameAutor}}"><br />
     Rating del libro
+    <input type="text" name="rating" value="{{Bookbrand.rating}}"><br />
     <button type="submit">Save</button>
 </form>
