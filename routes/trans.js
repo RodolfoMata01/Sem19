@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
 function insertTrans(req, res){
     var transbrand = new transbrand();
     transbrand.name = req.body.name;
-    transbrand._id = req.body._id;
+    transbrand.idtrans = req.body.idtrans;
     transbrand.date = req.body.date;
     transbrand.type = req.body.type;
     transbrand.save(e => {

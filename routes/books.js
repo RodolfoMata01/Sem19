@@ -1,6 +1,6 @@
 const express = require('express');
 var router = express.Router();
-const Bookbrand = require('../models/Bookbrand');
+const BookBrand = require('../models/Bookbrand');
 
 // rutas
 router.get('/', (req, res) => {
@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
 
 //metodos para insertar y actualizar
 function insertBookbrand(req, res){
-    var Bookbrand = new Bookbrand();
+    var Bookbrand = new BookBrand();
     Bookbrand.idbook = req.body.idbook;
     Bookbrand.namebook = req.body.namebook;
     Bookbrand.autorname = req.body.autorname;
@@ -32,11 +32,11 @@ function insertBookbrand(req, res){
     });
 }
 function updateBookbrand(req, res){
-    Brand.findOneAndUpdate({_id: req.body._id}, req.body, {new:true}, (err, doc) => {
+    BookBrand.findOneAndUpdate({_id: req.body._id}, req.body, {new:true}, (err, doc) => {
         if(!err){
             res.render('Bookbrand/BookbrandList', {
                 viewTitle: "Update Bookbrand",
-                brand: req.body
+                books: req.body
             })
         } else {
             console.log("Error", err);
@@ -45,7 +45,7 @@ function updateBookbrand(req, res){
 }
 
 router.get('/BookbrandList', (req, res) => {
-    Brand.find((error, docs) => {
+    BookBrand.find((error, docs) => {
         if(!error){
             res.render("pages/Bookbrand/BookbrandList", {
                 viewTitle: "Bookbrands",
@@ -57,20 +57,20 @@ router.get('/BookbrandList', (req, res) => {
     });
 })
 
-router.get('/:_id', (req, res) => {
-    Brand.findById(req.params.id, (err, doc) => {
+router.get('/:id', (req, res) => {
+    BookBrand.findById(req.params.id, (err, doc) => {
         if(!err){
             res.render('pages/Bookbrand/BookbrandAddEdit', {
                 viewTitle: "Update Bookbrand",
-                brand: doc
+                books: doc
             });
         }
     });
 });
 
 
-router.get('/delete/:idbook', (req, res) => {
-    Brand.findByIdAndRemove(req.params.id, (err) => {
+router.get('/delete/:id', (req, res) => {
+    BookBrand.findByIdAndRemove(req.params.id, (err) => {
         if(!err){
             res.redirect('/Bookbrand/BookbrandList');
         } else {
