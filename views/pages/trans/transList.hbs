@@ -1,0 +1,28 @@
+{{> header}}
+<h2>{{viewTitle}}</h2>
+<table border="1">
+    <thead>
+        <th>Patron ID</th> 
+        <th>Book ID</th>
+        <th>Transaction date</th>
+        <th>Transaction type</th>
+    </thead>
+    <tbody>
+        {{#each list}}
+            <tr>
+                <td>{{this.name}}</td> 
+                <td>{{this._id}}</td>
+                <td>{{this.date}}</td>
+                <td>{{this.type}}</td>
+
+                <td>
+                    <a href="/transbrand/{{this._id}}">Edit</a>
+                    <a href="/transbrand/delete/{{this._id}}"
+                    onclick="return confirm('Desea eliminar el registro?');">
+                    Delete
+                    </a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
