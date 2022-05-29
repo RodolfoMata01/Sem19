@@ -12,17 +12,11 @@ const hbs = require('hbs');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var brandsRouter = require('./routes/brands');
-<<<<<<< HEAD
-var transBrandRouter = require('./routes/trans');
-var bookRouter = require('./routes/books');
-=======
 
 var transBrandRouter = require('./routes/trans');
 
-
 var bookRouter = require('./routes/books');
 
->>>>>>> 194276a638a1e062d0ec03c6a4002f128e395e9a
 var app = express();
 
 // view engine setup
@@ -49,17 +43,10 @@ app.use((req, res, next) => {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/brand', brandsRouter);
-<<<<<<< HEAD
-=======
-
-app.use('/transBrand', transBrandRouter);
-
 app.use('/Bookbrand', bookRouter);
+app.use('/transbrand', transBrandRouter);
 
->>>>>>> 194276a638a1e062d0ec03c6a4002f128e395e9a
 
-app.use('/transBrand', transBrandRouter);
-app.use('/Bookbrand', bookRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
