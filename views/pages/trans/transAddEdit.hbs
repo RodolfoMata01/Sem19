@@ -3,12 +3,14 @@
 <form action="/transbrand" method="POST">
     <input type="hidden" name="_id" value="{{transbrand._id}}" />
     Patron id
-    <input type="text" name="name" value="{{brand.idbrand}}"><br />
+    <input type="text" name="idbrand" value="{{transbrand.idbrand}}"><br />
     Book id
-    <input type="text" name="id" value="{{Bookbrand.idbook}}"><br />
+    <input type="text" name="idbook" value="{{transbrand.idbook}}"><br />
     Transaction date
     <input type="text" name="date" value="{{transbrand.date}}"><br />
     Transaction type
     <input type="text" name="type" value="{{transbrand.type}}"><br />
+
+    
     <button type="submit">Save</button>
 </form>

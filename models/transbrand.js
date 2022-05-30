@@ -3,10 +3,8 @@ const Schema = mongoose.Schema;
 
 const transbrandSchema = new Schema({
     
+    idbrand: String,
     idbook: String,
-    idbook: String,
-    name: String,
-    idtrans: String,
     date: String,
     type: String,
 

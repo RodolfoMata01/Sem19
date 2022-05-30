@@ -18,14 +18,14 @@ router.post('/', (req, res) => {
 
 //metodos para insertar y actualizar
 function insertTrans(req, res){
-    var transbrand = new transBrand();
-    transbrand.name = req.body.name;
-    transbrand.idtrans = req.body.idtrans;
-    transbrand.date = req.body.date;
-    transbrand.type = req.body.type;
-    transbrand.save(e => {
+    var tranbrand = new transBrand();
+    tranbrand.idbrand = req.body.idbrand;
+    tranbrand.idbook = req.body.idbook;
+    tranbrand.date = req.body.date;
+    tranbrand.type = req.body.type;
+    tranbrand.save(e => {
         if(!e)
-        res.redirect('transbrand/transList');
+        res.redirect('trans/transList');
         else
         console.log("Error", e);
     });
@@ -33,9 +33,9 @@ function insertTrans(req, res){
 function updateTrans(req, res){
     transBrand.findOneAndUpdate({_id: req.body._id}, req.body, {new:true}, (err, doc) => {
         if(!err){
-            res.render('transbrand/transList', {
+            res.render('trans/transList', {
                 viewTitle: "Update Trans",
-                transbrand: req.body
+                tranbrand: req.body
             })
         } else {
             console.log("Error", err);
@@ -61,7 +61,7 @@ router.get('/:id', (req, res) => {
         if(!err){
             res.render('pages/trans/transAddEdit', {
                 viewTitle: "Update transaction",
-                transbrand: doc
+                tranbrand: doc
             });
         }
     });
@@ -71,7 +71,7 @@ router.get('/:id', (req, res) => {
 router.get('/delete/:id', (req, res) => {
     transBrand.findByIdAndRemove(req.params.id, (err) => {
         if(!err){
-            res.redirect('/transbrand/transList');
+            res.redirect('/trans/transList');
         } else {
             console.log("Error", err);
         }

@@ -2,19 +2,20 @@
 <h2>{{viewTitle}}</h2>
 <table border="1">
     <thead>
-        <th>Patron ID</th> 
-        <th>Book ID</th>
-        <th>Transaction date</th>
-        <th>Transaction type</th>
+        <th>ID Patron</th>
+        <th>ID Libro</th> 
+        <th>Date</th>
+        <th>type</th>
+        
     </thead>
     <tbody>
         {{#each list}}
             <tr>
                 <td>{{this.idbrand}}</td>
                 <td>{{this.idbook}}</td>
-                <td>{{this.name}}</td> 
                 <td>{{this.date}}</td>
                 <td>{{this.type}}</td>
+                
 
                 <td>
                     <a href="/transbrand/{{this._id}}">Edit</a>
