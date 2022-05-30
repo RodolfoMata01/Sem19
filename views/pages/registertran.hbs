@@ -1,0 +1,33 @@
+<div class="row justify-content-md-center">
+    <div class="col-md-4">
+        {{#if message}}
+            <div class="alert {{messageClass}}">
+                {{message}}
+            </div>
+        {{/if}}
+        <form action="/registertran" method="POST">
+            <div class="form-group">
+                ID del Libro
+                <input type="text" name="idbook" id="" class="form-control">
+            </div>
+            <div class="form-group">
+                Titulo Del Libro
+                <input type="text" name="namebook" id="" class="form-control">
+            </div>
+            <div class="form-group">
+                Nombre del autor
+                <input type="text" name="autorname" id="" class="form-control">
+            </div>
+            <div class="form-group">
+                Apellido del Autor
+
+                <input type="text" name="LastnameAutor" id="" class="form-control">
+            </div>
+            <div class="form-group">
+                Rating del libro
+                <input type="text" name="rating" id="" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+</div>

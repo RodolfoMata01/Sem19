@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const brandSchema = new Schema({
+    idbrand: String,
     name: String,
     lastname: String,
     street: String,

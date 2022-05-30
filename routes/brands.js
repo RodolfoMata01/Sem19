@@ -19,6 +19,7 @@ router.post('/', (req, res) => {
 //metodos para insertar y actualizar
 function insertBrand(req, res){
     var brand = new Brand();
+    brand.idbrand = req.body.idbrand;
     brand.name = req.body.name;
     brand.lastname = req.body.lastname;
     brand.street = req.body.street;
